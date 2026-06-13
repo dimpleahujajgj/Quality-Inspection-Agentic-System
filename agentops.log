@@ -1,0 +1,4 @@
+2026-06-13 13:32:28,811 - INFO - Session Replay for default trace: https://app.agentops.ai/sessions?trace_id=0e76ff1fe0a6ee1c4207bf3484ce4392
+2026-06-13 13:32:28,875 - WARNING - ActionEvent() is deprecated and will be removed in v4 in the future. Automatically tracked in v4.
+2026-06-13 13:32:28,875 - WARNING - record() is deprecated and will be removed in v4 in the future. Automatically tracked in v4.
+2026-06-13 13:32:37,447 - INFO - Session Replay for default.session trace: https://app.agentops.ai/sessions?trace_id=0e76ff1fe0a6ee1c4207bf3484ce4392

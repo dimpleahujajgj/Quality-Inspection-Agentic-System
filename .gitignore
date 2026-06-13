@@ -1,0 +1,29 @@
+
+
+# Environment
+.env
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# YOLO
+*.pt
+runs/
+
+# Data — sample images aur outputs git mein nahi jaayenge
+data/outputs/
+data/sample_images/*
+!data/sample_images/.gitkeep
+
+# AgentOps
+.agentops/
+
+# IDE
+.vscode/
+.idea/
