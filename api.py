@@ -14,6 +14,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# YOLO model pre-download on startup
+from ultralytics import YOLO
+print("Downloading YOLO model if needed...")
+YOLO("yolov8n.pt")  # auto download hoga agar nahi hai
+print("YOLO model ready!")
+
 import agentops
 # disable_instrumentations — LangGraph circular import fix
 agentops.init(
