@@ -1,0 +1,29 @@
+# ── render.yaml — Render.com config ──────────────────────
+# Yeh file project root mein save karo
+
+services:
+  # FastAPI backend
+  - type: web
+    name: quality-inspection-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: AGENTOPS_API_KEY
+        sync: false   # Render dashboard pe manually set karo
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PYTHONIOENCODING
+        value: utf-8
+
+  # Streamlit frontend
+  - type: web
+    name: quality-inspection-ui
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run ui.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: API_URL
+        value: https://quality-inspection-api.onrender.com  # API ka URL daalo
+      - key: PYTHONIOENCODING
+        value: utf-8
